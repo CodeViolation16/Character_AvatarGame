@@ -12,8 +12,16 @@ function Options(value, key) {
   const eyesArray = new Array(eyesNumber).fill();
   const [eyesIdx, setEyesIdx] = useState();
 
-  const hairArray = new Array(30).fill();
+  const hairNumber = 73;
+  const hairArray = new Array(hairNumber).fill();
   const [hairIdx, setHairIdx] = useState();
+
+  function randomize() {
+    const random = Math.floor(Math.random() * 17);
+    setBodyIdx(random);
+    setEyesIdx(random);
+    setHairIdx(random);
+  }
 
   return (
     <div className="list-section">
@@ -59,7 +67,9 @@ function Options(value, key) {
         </div>
 
         <div className="text-center">
-          <button className="button">Randomize</button>
+          <button onClick={() => randomize()} className="button">
+            Randomize
+          </button>
         </div>
       </div>
     </div>

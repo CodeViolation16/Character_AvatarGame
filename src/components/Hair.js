@@ -15,7 +15,7 @@ function Hair({ hairArray, setHairIdx }) {
           >
             <div className="clickable square" key={index}>
               <img
-                src={`character/body/${index + 1}.png`}
+                src={`character/hair/${index + 1}.png`}
                 alt=""
                 height="60"
                 className="img-center"
